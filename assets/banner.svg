@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0a0c10"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="50%" stop-color="#bc8cff"/>
+      <stop offset="100%" stop-color="#3fb950"/>
+    </linearGradient>
+    <linearGradient id="pulse-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#bc8cff" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 42px; fill: url(#text-grad); }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; fill: #8b949e; }
+    .tag { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 14px; fill: #3fb950; }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.08); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 0.3; }
+    }
+    @keyframes float1 {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes float2 {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(12px) rotate(-3deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: -40; }
+    }
+
+    .pulse-node { animation: pulse 4s infinite ease-in-out; transform-origin: center; }
+    .float-item1 { animation: float1 6s infinite ease-in-out; }
+    .float-item2 { animation: float2 7s infinite ease-in-out; }
+    .flow-line { stroke-dasharray: 8, 8; animation: dash 2s linear infinite; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="12" fill="url(#bg-grad)"/>
+  <rect width="1196" height="296" x="2" y="2" rx="10" fill="none" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Dynamic Background Graphics (Behind text) -->
+  <g class="float-item1" opacity="0.25">
+    <circle cx="1000" cy="150" r="120" fill="url(#pulse-grad)" class="pulse-node"/>
+    <polygon points="1000,50 1086,100 1086,200 1000,250 914,200 914,100" fill="none" stroke="#58a6ff" stroke-width="2"/>
+    <polygon points="1000,75 1065,112 1065,187 1000,225 935,187 935,112" fill="none" stroke="#bc8cff" stroke-width="1.5"/>
+  </g>
+
+  <g class="float-item2" opacity="0.15">
+    <circle cx="150" cy="80" r="80" fill="url(#pulse-grad)" class="pulse-node"/>
+    <path d="M 50 150 Q 150 50 300 150 T 550 150" fill="none" stroke="#3fb950" stroke-width="3" class="flow-line"/>
+  </g>
+
+  <!-- Foreground Content -->
+  <g transform="translate(60, 95)">
+    <!-- Kubernetes / Security Icon -->
+    <g transform="translate(0, 5)">
+      <path d="M25 0 L50 15 L50 45 L25 60 L0 45 L0 15 Z" fill="none" stroke="#58a6ff" stroke-width="3"/>
+      <path d="M25 10 L40 20 L40 40 L25 50 L10 40 L10 20 Z" fill="#bc8cff" opacity="0.3"/>
+      <circle cx="25" cy="30" r="6" fill="#3fb950"/>
+    </g>
+
+    <text x="75" y="32" class="tag">⚡ CLOUD-NATIVE THREAT DETECTION &amp; OBSERVABILITY</text>
+    <text x="75" y="75" class="title">Awesome Kubernetes Runtime Security 🛡️</text>
+    <text x="75" y="115" class="subtitle">Curated SaaS &amp; Open-Source Ecosystem for eBPF, Syscall Analysis &amp; Enforcement</text>
+  </g>
+</svg>
