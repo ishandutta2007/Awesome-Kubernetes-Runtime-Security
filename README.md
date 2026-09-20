@@ -52,7 +52,7 @@ Below is a comparison of top commercial Kubernetes runtime security platforms so
 
 Curated list of top open-source Kubernetes runtime security, eBPF threat detection, and policy enforcement tools sorted by **GitHub Stars_Count (descending)**. ⭐
 
-| 📦 Project Name | ⭐ Stars | 📜 License | 🔍 Description & Use Case |
+| 📦 Project Name | ⭐ Github_Stars | 📜 License | 🔍 Description & Use Case |
 | :--- | :--- | :--- | :--- |
 | **[Aqua Trivy](https://github.com/aquasecurity/trivy)** | [![GitHub_Stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers) | Apache-2.0 | Comprehensive vulnerability scanner for container images, file systems, Git repos, and Kubernetes clusters. |
 | **[Falco](https://github.com/falcosecurity/falco)** | [![GitHub_Stars](https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white)](https://github.com/falcosecurity/falco/stargazers) | Apache-2.0 | CNCF Graduated runtime security engine monitoring syscalls and kernel events for anomalous workload behavior. |
