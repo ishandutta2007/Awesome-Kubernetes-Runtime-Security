@@ -50,7 +50,7 @@ Below is a comparison of top commercial Kubernetes runtime security platforms so
 
 ## 🔓 Open-Source GitHub Projects
 
-Curated list of top open-source Kubernetes runtime security, eBPF threat detection, and policy enforcement tools sorted by **GitHub Stars_Count (descending)**. ⭐
+Curated list of top open-source Kubernetes runtime security, eBPF threat detection, and policy enforcement tools sorted by **GitHub_Stars_Count (descending)**. ⭐
 
 | 📦 Project Name | ⭐ Github_Stars | 📜 License | 🔍 Description & Use Case |
 | :--- | :--- | :--- | :--- |
